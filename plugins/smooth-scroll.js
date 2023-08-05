@@ -6,6 +6,6 @@
 // // export default {}
 
 
-// export default defineNuxtPlugin((nuxtApp) => {
-//     nuxtApp.vueApp.component("vueSmoothScroll", vueSmoothScroll);
-// })
+export default defineNuxtPlugin((nuxtApp) => {
+    // nuxtApp.vueApp.component("vueSmoothScroll", vueSmoothScroll);
+})

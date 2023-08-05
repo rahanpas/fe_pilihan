@@ -9,8 +9,8 @@
         <div class="w-full flex flex-row items-center justify-between py-6">
           <div>
             <img
-              src="~/assets/img/logo/pilihunt.svg"
-              class="w-24 xl:w-28"
+              src="/img/logo/pilihunt.png"
+              class="w-28 xl:w-40"
               alt="Nefa Logo"
             />
           </div>
