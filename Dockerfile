@@ -5,6 +5,7 @@ COPY . .
 RUN npm i
 RUN npm cache clean --force
 RUN npm run build
+RUN npm install -g npm
 
 EXPOSE 3000 
 
