@@ -88,9 +88,8 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-
-defineProps({
+// import { defineProps } from "vue";
+const props = defineProps({
   showSidebar: {
     type: Object,
   },
