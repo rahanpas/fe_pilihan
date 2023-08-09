@@ -1,10 +1,12 @@
-version: "3"
+version: '3.5'
 
 services:
-  nuxt-docker-example:
-    container_name: nuxt-docker-pilihunt
+  nuxt:
     build:
       context: .
-      # dockerfile: DockerFile
+    image: nuxt-app-fepilihan
+    container_name: nuxt-app-fepilihan
     ports:
-      - "7918:3000"
+      - ${OUTPUT_PORT}:3000
+
+# Remember to see the pages on port OUTPUT_PORT in .env
