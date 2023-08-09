@@ -1,11 +1,11 @@
-FROM node:18.15
+FROM node:16-alpine
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
 COPY . .
 RUN npm i
 RUN npm cache clean --force
-RUN npm run build
 RUN npm install -g npm
+RUN npm run build
 
 EXPOSE 3000 
 
