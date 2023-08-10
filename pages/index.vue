@@ -97,7 +97,7 @@
                 class="grid flex-grow card rounded-box place-items-center h-auto"
               >
                 <div
-                  class="card w-auto bg-base-100 shadow-xl h-auto min-h-full"
+                  class="card w-auto bg-base-100 shadow-xl  min-h-full"
                 >
                   <div class="card-body items-center text-center">
                     <h1
@@ -112,7 +112,7 @@
                     <img
                       src="https://wallpapercave.com/wp/wp3950063.jpg"
                       alt="Shoes"
-                      class="rounded-xl object-fill w-96 min-w-full"
+                      class="rounded-xl object-cover h-48 w-96 min-w-full"
                     />
                   </figure>
                   <div class="card-body">
@@ -149,7 +149,7 @@
                     <img
                       src="https://cdn.wallpapersafari.com/46/63/j0Uu9b.jpg"
                       alt="Shoes"
-                      class="rounded-xl object-fill w-96 min-w-full"
+                      class="rounded-xl object-cover h-48 w-96 min-w-full"
                     />
                   </figure>
                   <div class="card-body">
@@ -182,7 +182,7 @@
                     <img
                       src="https://c.pxhere.com/images/63/63/c7c823330ec7d376ef4a7e896dd3-1451419.jpg!d"
                       alt="Shoes"
-                      class="rounded-xl object-fill w-96 min-w-full"
+                      class="rounded-xl object-cover h-48 w-96 min-w-full"
                     />
                   </figure>
                   <div class="card-body items-center text-center">
