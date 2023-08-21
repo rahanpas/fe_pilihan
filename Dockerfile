@@ -9,9 +9,9 @@ RUN apk --no-cache add openssh g++ make python3 git
 COPY package.json /usr/src/nuxt-app/
 COPY package-lock.json /usr/src/nuxt-app/
 
-RUN npm i
-RUN npm cache clean --force
 RUN npm install -g npm
+RUN npm install
+RUN npm cache clean --force
 RUN npm run build
 
 EXPOSE 3000 
