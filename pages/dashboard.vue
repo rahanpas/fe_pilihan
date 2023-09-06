@@ -62,7 +62,7 @@
 import { PhotoIcon, UserCircleIcon } from "@heroicons/vue/24/solid";
 definePageMeta({
   layout: "custom",
-  // middleware: "guest",
+  middleware: "auth",
 });
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="navbar bg-base-100">
     <div class="flex-1">
-      <!-- {{ showSidebar.isside }} -->
+      {{ datauser }}
       <button
         @click="showSidebar.isside = !showSidebar.isside"
         class="text-cyan-600 font-extrabold lg:hidden xl:hidden"
@@ -21,14 +21,14 @@
           />
         </svg>
       </button>
-      <a class="btn btn-ghost normal-case text-xl">Selamat Datang Irawan</a>
+      <a class="btn btn-ghost normal-case text-xl">Selamat Datang, </a>
     </div>
     <div class="flex-none">
       <select class="select w-full max-w-xs" v-model="colorMode.preference">
         <option disabled selected>Theme</option>
         <option v-for="theme of themes" :key="theme">{{ theme }}</option>
       </select>
-      <div class="dropdown dropdown-end">
+      <!-- <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle">
           <div class="indicator">
             <svg
@@ -60,7 +60,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
@@ -80,7 +80,7 @@
             </a>
           </li>
           <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><a @click="logout">Logout</a></li>
         </ul>
       </div>
     </div>
@@ -131,7 +131,7 @@ const themes = [
 const { $sanctumAuth } = useNuxtApp();
 const router = useRouter();
 const { $apiFetch } = useNuxtApp();
-// const { data: datauser } = await useAsyncData('datauser', () => $apiFetch(`api/user`))
+const { data: datauser } = await useAsyncData('datauser', () => $apiFetch(`api/user`))
 const logout = async () => {
   await $sanctumAuth.logout(
     // optional callback function

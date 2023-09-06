@@ -1,103 +1,106 @@
 <template>
-  <!--
-      This example requires updating your template:
-  
-      ```
-      <html class="h-full bg-white">
-      <body class="h-full">
-      ```
-    -->
   <div
-    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8"
+    class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
   >
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <img
-        class="mx-auto h-10 w-auto"
-        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-        alt="Your Company"
-      />
-      <h2
-        class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+      ></div>
+      <div
+        class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
       >
-        Sign in to your account
-      </h2>
-    </div>
-
-    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form class="space-y-6" action="#" method="POST">
-        <div>
-          <label
-            for="email"
-            class="block text-sm font-medium leading-6 text-gray-900"
-            >Email address</label
-          >
-          <div class="mt-2">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              required=""
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
+        <div class="max-w-md mx-auto">
+          <div>
+            <h1 class="text-2xl font-semibold">
+              SKP Human Management Business
+            </h1>
           </div>
-        </div>
-
-        <div>
-          <div class="flex items-center justify-between">
-            <label
-              for="password"
-              class="block text-sm font-medium leading-6 text-gray-900"
-              >Password</label
+          <div class="divide-y divide-gray-200">
+            <div
+              class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
             >
-            <div class="text-sm">
-              <a
-                href="#"
-                class="font-semibold text-indigo-600 hover:text-indigo-500"
-                >Forgot password?</a
-              >
+              <div class="relative">
+                <input
+                  autocomplete="off"
+                  id="email"
+                  name="email"
+                  type="text"
+                  class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                  placeholder="Email address"
+                  v-model="email"
+                />
+                <label
+                  for="email"
+                  class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                  >Email Address</label
+                >
+              </div>
+              <div class="relative">
+                <input
+                  autocomplete="off"
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                  placeholder="Password"
+                  v-model="password"
+                />
+                <label
+                  for="password"
+                  class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                  >Password</label
+                >
+              </div>
+              <div class="relative">
+                <button
+                  class="bg-blue-500 text-white rounded-md px-2 py-1"
+                  @click="login"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
-          <div class="mt-2">
-            <input
-              id="password"
-              name="password"
-              type="password"
-              autocomplete="current-password"
-              required=""
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-          </div>
         </div>
-
-        <div>
-          <button
-            type="submit"
-            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Sign in
-          </button>
-        </div>
-      </form>
-
-      <p class="mt-10 text-center text-sm text-gray-500">
-        Not a member?
-        {{ " " }}
-        <a
-          href="#"
-          class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-          >Start a 14 day free trial</a
-        >
-      </p>
+      </div>
     </div>
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  layout: "blank"
-});
-</script>
 
-<style>
-</style>
+<script setup>
+// This will work in both `<script setup>` and `<script>`
+definePageMeta({
+  layout: "blank",
+  middleware: "guest",
+});
+
+const { $sanctumAuth } = useNuxtApp();
+const router = useRouter();
+const errors = ref([]);
+const loading = ref(false);
+const email = ref("");
+const password = ref(null);
+// const xsrfToken = useCookie();
+
+async function login() {
+  try {
+    await $sanctumAuth.login(
+      {
+        // email: "admin@contoh.id",
+        // password: "rahasia12345",
+        email: email.value,
+        password: password.value,
+      },
+      // optional callback function
+      (data) => {
+        console.log(data);
+        location.reload();
+      }
+    );
+  } catch (e) {
+    // your error handling
+    errors.value = e.message;
+  }
+}
+</script>

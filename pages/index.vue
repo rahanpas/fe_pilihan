@@ -1,90 +1,52 @@
+<script setup>
+definePageMeta({
+  middleware: "auth",
+})
+</script>
 <template>
   <div class="w-full">
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
       <BaseSection>
-        <div
-          class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left"
-        >
-          <span
-            data-aos="fade-right"
-            data-aos-once="true"
-            class="text-base text-gradient font-semibold uppercase"
-            >Gabung Sekarang</span
-          >
-          <h1
-            data-aos="fade-right"
-            data-aos-once="true"
-            class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
-          >
+        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
+          <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase">Gabung
+            Sekarang</span>
+          <h1 data-aos="fade-right" data-aos-once="true"
+            class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
             Create A
             <span class="text-header-gradient"> Digital </span> Marketing Plan
           </h1>
-          <p
-            data-aos="fade-down"
-            data-aos-once="true"
-            data-aos-delay="300"
-            class="paragraph hidden sm:block"
-          >
+          <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
             Kami hadir untuk membantu anda dalam mempromosikan Profil, Usaha,
             dan Konten Kreasi
           </p>
-          <div
-            data-aos="fade-up"
-            data-aos-once="true"
-            data-aos-delay="700"
-            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"
-          >
+          <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700"
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
             <BaseButton
-              class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
-            >
+              class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white">
               Selengkapnya
             </BaseButton>
           </div>
         </div>
         <div class="hidden sm:block col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img
-              data-aos="fade-up"
-              data-aos-once="true"
-              src="~/assets/img/hero-image.webp"
-              class="-mt-4"
-              alt=""
-            />
+            <img data-aos="fade-up" data-aos-once="true" src="~/assets/img/hero-image.webp" class="-mt-4" alt="" />
           </div>
         </div>
-        <img
-          data-aos="fade-up"
-          data-aos-delay="300"
-          src="~/assets/img/pattern/ellipse-1.png"
-          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
-        />
-        <img
-          data-aos="fade-up"
-          data-aos-delay="300"
-          src="~/assets/img/pattern/ellipse-2.png"
-          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
-        />
-        <img
-          data-aos="fade-up"
-          data-aos-delay="300"
-          src="~/assets/img/pattern/ellipse-3.png"
-          class="hidden sm:block absolute bottom-56 right-24 w-6"
-        />
-        <img
-          data-aos="fade-up"
-          data-aos-delay="300"
-          src="~/assets/img/pattern/star.png"
-          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
-        />
+        <img data-aos="fade-up" data-aos-delay="300" src="~/assets/img/pattern/ellipse-1.png"
+          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6" />
+        <img data-aos="fade-up" data-aos-delay="300" src="~/assets/img/pattern/ellipse-2.png"
+          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6" />
+        <img data-aos="fade-up" data-aos-delay="300" src="~/assets/img/pattern/ellipse-3.png"
+          class="hidden sm:block absolute bottom-56 right-24 w-6" />
+        <img data-aos="fade-up" data-aos-delay="300" src="~/assets/img/pattern/star.png"
+          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8" />
       </BaseSection>
     </section>
 
     <!-- Industry-leading security section -->
     <section class="w-full">
-      <div
-        class="relative max-w-screen-2xl px-8 mx-auto grid grid-cols-12 gap-x-6"
-      >
+      <div class="relative max-w-screen-2xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div data-aos="fade-right" class="col-span-12 my-24">
           <h2 class="text-4xl font-semibold">
             Produk Pilihan <span class="text-header-gradient">Kami</span>
@@ -93,27 +55,17 @@
         <div data-aos="fade-right" class="col-span-12">
           <div class="w-full">
             <div class="flex flex-col w-full lg:flex-row">
-              <div
-                class="grid flex-grow card rounded-box place-items-center h-auto"
-              >
-                <div
-                  class="card w-auto bg-base-100 shadow-xl  min-h-full"
-                >
+              <div class="grid flex-grow card rounded-box place-items-center h-auto">
+                <div class="card w-auto bg-base-100 shadow-xl  min-h-full">
                   <div class="card-body items-center text-center">
-                    <h1
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                      class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize"
-                    >
+                    <h1 data-aos="fade-right" data-aos-once="true"
+                      class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize">
                       Jasa Konten Kreator
                     </h1>
                   </div>
                   <figure class="px-10 pt-10">
-                    <img
-                      src="https://wallpapercave.com/wp/wp3950063.jpg"
-                      alt="Shoes"
-                      class="rounded-xl object-cover h-48 w-96 min-w-full"
-                    />
+                    <img src="https://wallpapercave.com/wp/wp3950063.jpg" alt="Shoes"
+                      class="rounded-xl object-cover h-48 w-96 min-w-full" />
                   </figure>
                   <div class="card-body">
                     <h2 class="card-title">
@@ -130,27 +82,17 @@
                 </div>
               </div>
               <div class="divider lg:divider-horizontal"></div>
-              <div
-                class="grid flex-grow card rounded-box place-items-center h-auto"
-              >
-                <div
-                  class="card w-auto bg-base-100 shadow-xl h-auto min-h-full"
-                >
+              <div class="grid flex-grow card rounded-box place-items-center h-auto">
+                <div class="card w-auto bg-base-100 shadow-xl h-auto min-h-full">
                   <div class="card-body items-center text-center">
-                    <h1
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                      class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize"
-                    >
+                    <h1 data-aos="fade-right" data-aos-once="true"
+                      class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize">
                       Jasa Pembuatan Web Site
                     </h1>
                   </div>
                   <figure class="px-10 pt-10">
-                    <img
-                      src="https://cdn.wallpapersafari.com/46/63/j0Uu9b.jpg"
-                      alt="Shoes"
-                      class="rounded-xl object-cover h-48 w-96 min-w-full"
-                    />
+                    <img src="https://cdn.wallpapersafari.com/46/63/j0Uu9b.jpg" alt="Shoes"
+                      class="rounded-xl object-cover h-48 w-96 min-w-full" />
                   </figure>
                   <div class="card-body">
                     <h2 class="card-title">
@@ -167,23 +109,14 @@
                 </div>
               </div>
               <div class="divider lg:divider-horizontal"></div>
-              <div
-                class="grid flex-grow card rounded-box place-items-center h-auto"
-              >
-                <div
-                  class="card w-auto bg-base-100 shadow-xl h-auto min-h-full"
-                >
+              <div class="grid flex-grow card rounded-box place-items-center h-auto">
+                <div class="card w-auto bg-base-100 shadow-xl h-auto min-h-full">
                   <div class="card-body items-center text-center">
-                    <img
-                      src="https://myads.telkomsel.com/images/myads-logo-color.png"
-                    />
+                    <img src="https://myads.telkomsel.com/images/myads-logo-color.png" />
                   </div>
                   <figure class="px-10 pt-10">
-                    <img
-                      src="https://c.pxhere.com/images/63/63/c7c823330ec7d376ef4a7e896dd3-1451419.jpg!d"
-                      alt="Shoes"
-                      class="rounded-xl object-cover h-48 w-96 min-w-full"
-                    />
+                    <img src="https://c.pxhere.com/images/63/63/c7c823330ec7d376ef4a7e896dd3-1451419.jpg!d" alt="Shoes"
+                      class="rounded-xl object-cover h-48 w-96 min-w-full" />
                   </figure>
                   <div class="card-body items-center text-center">
                     <h2 class="card-title text-primary-focus">
@@ -217,11 +150,8 @@
           <ArrowUpIcon :size="20" />
         </a> -->
       <NuxtLink to="#top">
-        <button
-          data-aos="flip-down"
-          data-aos-delay="150"
-          class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
-        >
+        <button data-aos="flip-down" data-aos-delay="150"
+          class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700">
           To top with NuxtLink to="#top"
         </button>
       </NuxtLink>
@@ -234,11 +164,12 @@
   </div>
 </template>
   
-  <script>
+<script>
 import aosMixin from "@/mixins/aos";
 export default {
   name: "IndexPage",
   mixins: [aosMixin],
+  middleware: "auth",
   data() {
     return {
       selected: 0,
@@ -413,29 +344,30 @@ export default {
 };
 </script>
   
-  <style scoped>
+<style scoped>
 .text-header-gradient {
   background: rgb(57, 132, 244);
-  background: linear-gradient(
-    169.4deg,
-    #3984f4 -6.01%,
-    #0cd3ff 36.87%,
-    #2f7cf0 78.04%,
-    #0e65e8 103.77%
-  );
+  background: linear-gradient(169.4deg,
+      #3984f4 -6.01%,
+      #0cd3ff 36.87%,
+      #2f7cf0 78.04%,
+      #0e65e8 103.77%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .bg-partner {
   background: url("../assets/img/partner/background.png");
   background-size: cover;
   background-position: center;
 }
+
 .bg-trading-tools {
   background: url("../assets/img/bg-trading-tools.webp");
   background-size: cover;
   background-position: center;
 }
+
 .max-h-0 {
   max-height: 0;
 }
